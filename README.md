@@ -13,3 +13,5 @@ Permitindo organizar, controlar e planejar as finanças.
 # Status 🛠️
 
 Em desenvolvimento.
+
+[![codecov](https://codecov.io/gh/wnneto/dinheirinho/branch/main/graph/badge.svg?token=MF84YEE0I1)](https://codecov.io/gh/wnneto/dinheirinho)
