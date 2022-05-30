@@ -5,4 +5,4 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('Nas Nuvens!!!!')
+    return HttpResponse('<html><body>NAS NUVENS!!!</body></html>', content_type='text/html')
