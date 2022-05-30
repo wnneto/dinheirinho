@@ -4,6 +4,9 @@ ALLOWED_HOSTS=localhost,127.0.0.1
 
 DATABASE_URL=postgres://postgres:postreges@localhost/testdb
 
+# Config django_debug_toolbar
+INTERNAL_IPS=127.0.0.1
+
 # Config do AWS
 
 AWS_ACCESS_KEY_ID=
