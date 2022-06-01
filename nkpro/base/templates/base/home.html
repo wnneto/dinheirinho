@@ -1,7 +1,7 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +12,7 @@
     <meta name="description" content="Dinheirinho">
     <meta name="author" content="NK!">
 
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <script src="{% static 'js/jquery.min.js' %}"></script>
@@ -26,7 +27,9 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a href="{% url 'base:home' %}">
+            <img src="{% static 'img/pig.png' %}" alt="" width="44" height="44"
+                 class="d-inline-block align-text-top"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,7 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'base:home' %}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
@@ -67,13 +70,12 @@
 
 <!-- FIM NAVBAR -->
 
-
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-md-12">
 
-            <!-- Inicio Carrocel -->
-
+            <!-- Inicio Carrossel -->
+            <br>
             <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
@@ -84,22 +86,25 @@
                             aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="https://www.layoutit.com/img/sports-q-c-1600-500-2.jpg" class="d-block w-100" alt="Prático">
+                    <div class="carousel-item active" data-bs-interval="8000">
+                        <img src="{% static 'img/pratico.jpg'%}" width="500" height="360"
+                             class="container-fluidd-block w-100" alt="Prático">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Prático</h5>
                             <p>Poucos clicks e está tudo anotado!</p>
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <img src="https://www.layoutit.com/img/sports-q-c-1600-500-1.jpg" class="d-block w-100" alt="Rápido">
+                    <div class="carousel-item" data-bs-interval="8000">
+                        <img src="{% static 'img/acesso.jpeg'%}" width="500" height="360"
+                             class="container-fluidd-block w-100" alt="De qualquer lugar">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Take Control Anywhere</h5>
-                            <p>Tenha controle de seus gastos de qualquer lugar!</p>
+                            <h5>Controle</h5>
+                            <p>Acesse suas informações de qualquer lugar!</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://www.layoutit.com/img/sports-q-c-1600-500-3.jpg" class="d-block w-100" alt="...">
+                        <img src="{% static 'img/data.jpg'%}" width="500" height="360"
+                             class="container-fluidd-block w-100" alt="De qualquer lugar">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Lembretes</h5>
                             <p>Pagamentos, cobranças, siga o planejamento!</p>
@@ -118,40 +123,74 @@
                 </button>
             </div>
 
-            <!-- Fim Carrocel -->
+            <!-- Fim Carrossel -->
 
-            <div class="jumbotron">
-                <h2>
+            <!-- Inicio Texto -->
+            <div class="row-sm-6">
+                <br>
+                <h2 class="bg-success p-2" style="--bs-bg-opacity: .5;">
                     Hello, world!
                 </h2>
                 <p>
-                    This is a template for a simple marketing or informational website. It includes a large callout
-                    called the hero unit and three supporting pieces of content. Use it as a starting point to create
-                    something more unique.
+                    O Dinheirinho pretende tornar mais intuitivo o registro de compras e cobranças.
+                    Permitindo organizar, controlar e planejar as finanças. Tenha mais tempo aproveitar
+                    a vida!
                 </p>
                 <p>
-                    <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                    <a class="btn btn-primary btn-large" href="#">Experimente</a>
                 </p>
             </div>
-            <div class="card">
-                <h5 class="card-header">
-                    Card title
-                </h5>
-                <div class="card-body">
-                    <p class="card-text">
-                        Card content
-                    </p>
+
+            <div class="row row-cols-1 row-cols-md">
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'img/git.png' %}" class="img-thumbnail-center" width="96" height="96">
+                        <div class="card-body">
+                            <h5 class="card-title">GitHub</h5>
+                            <p class="card-text">Contribua com o nosso repositório.</p>
+                            <a class="btn btn-primary btn-large" href="https://github.com/wnneto/dinheirinho">
+                                Acesse</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    Card footer
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- Fim Texto -->
+
+        <!-- Inicio Rodapé -->
+        <footer class="rodape mt-3 pt-1">
+            <div class="row">
+                <div class="col">
+                    <h5 class="m-1">Contato</h5>
+                    <address>
+                        <a href="mailto: wn.nt3w@gmail.com">
+                            <img src="{% static 'img/mail.png' %}" alt="" width="38" height="38"
+                                 class="d-inline-block align-text-top"></a>
+                        <a href='{% url "base:home" %}'> <!-- MUDAR -->
+                            <img src="{% static 'img/instagram.png' %}" alt="" width="38" height="38"
+                                 class="d-inline-block align-text-top"></a>
+                        <a href='{% url "base:home" %}'> <!-- MUDAR -->
+                            <img src="{% static 'img/linkdin.png' %}" alt="" width="38" height="38"
+                                 class="d-inline-block align-text-top"></a>
+                    </address>
+                </div>
+            </div>
+            <div class="direitos pb-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mt-2">
+                            {% now 'Y' %} Dinheirinho. Todos os direitos reservados.
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
+    </footer>
+    <!-- Fim Rodapé -->
 </div>
 </body>
 </html>
