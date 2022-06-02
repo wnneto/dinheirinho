@@ -15,7 +15,7 @@ def test_status_code(resp):   # Teste de resposta
     assert resp.status_code == 200
 
 
-def test_title(resp):   # Teste para testar o título da página
+def test_title(resp):   # Teste para o título da página
     assert_contains(resp, '<title>Dinheirinho Smart Gestão!</title>')
 
 

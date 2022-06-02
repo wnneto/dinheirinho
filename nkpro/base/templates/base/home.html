@@ -71,126 +71,159 @@
 <!-- FIM NAVBAR -->
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
+    <div class="col-md-12">
 
-            <!-- Inicio Carrossel -->
+        <!-- Inicio Carrossel -->
+        <br>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="8000">
+                    <img src="{% static 'img/pratico.jpg'%}" width="500" height="360"
+                         class="container-fluidd-block w-100" alt="Prático">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Prático</h5>
+                        <p>Poucos clicks e está tudo anotado!</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="8000">
+                    <img src="{% static 'img/acesso.jpeg'%}" width="500" height="360"
+                         class="container-fluidd-block w-100" alt="De qualquer lugar">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Controle</h5>
+                        <p>Acesse suas informações de qualquer lugar!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/data.jpg'%}" width="500" height="360"
+                         class="container-fluidd-block w-100" alt="De qualquer lugar">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Lembretes</h5>
+                        <p>Pagamentos, cobranças, siga o planejamento!</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Fim Carrossel -->
+
+        <!-- Inicio Texto -->
+        <div class="row-sm-6">
             <br>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="8000">
-                        <img src="{% static 'img/pratico.jpg'%}" width="500" height="360"
-                             class="container-fluidd-block w-100" alt="Prático">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Prático</h5>
-                            <p>Poucos clicks e está tudo anotado!</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="8000">
-                        <img src="{% static 'img/acesso.jpeg'%}" width="500" height="360"
-                             class="container-fluidd-block w-100" alt="De qualquer lugar">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Controle</h5>
-                            <p>Acesse suas informações de qualquer lugar!</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{% static 'img/data.jpg'%}" width="500" height="360"
-                             class="container-fluidd-block w-100" alt="De qualquer lugar">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Lembretes</h5>
-                            <p>Pagamentos, cobranças, siga o planejamento!</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                        data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                        data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+            <h2 class="bg-success p-2" style="--bs-bg-opacity: .5;">
+                Hello, world!
+            </h2>
+            <p>
+                O Dinheirinho pretende tornar mais intuitivo o registro de compras e cobranças.
+                Permitindo organizar, controlar e planejar as finanças. Tenha mais tempo para aproveitar
+                a vida!
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Inicio inscrição -->
+<div class="container">
+    <h4>Faça parte da lista de espera!</h4>
+
+   <form action="https://herokuapp.us8.list-manage.com/subscribe/post?u=3d7cd622a9043c33f45f1cd22&amp;id=3fe518ae20"
+          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+          target="_blank" novalidate>
+
+    <div class="row g-3">
+            <div class="col-sm-3">
+                <label class="visually-hidden" for="mce-FNAME"></label>
+                <input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME"
+                       placeholder="Seu Nome">
+            </div>
+            <div class="col-sm-3">
+                <label class="visually-hidden" for="mce-EMAIL"></label>
+                <input type="email" value="" name="EMAIL" class="form-control required" id="mce-EMAIL"
+                       placeholder="exemplo@email.com">
+
             </div>
 
-            <!-- Fim Carrossel -->
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                                                                  name="b_3d7cd622a9043c33f45f1cd22_3fe518ae20"
+                                                                                  tabindex="-1" value="">
+        </div>
 
-            <!-- Inicio Texto -->
-            <div class="row-sm-6">
-                <br>
-                <h2 class="bg-success p-2" style="--bs-bg-opacity: .5;">
-                    Hello, world!
-                </h2>
-                <p>
-                    O Dinheirinho pretende tornar mais intuitivo o registro de compras e cobranças.
-                    Permitindo organizar, controlar e planejar as finanças. Tenha mais tempo para aproveitar
-                    a vida!
-                </p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="#">Experimente</a>
-                </p>
-            </div>
-
-            <div class="row row-cols-1 row-cols-md">
-                <div class="col">
-                    <div class="card">
-                        <img src="{% static 'img/git.png' %}" class="img-thumbnail-center" width="96" height="96">
-                        <div class="card-body">
-                            <h5 class="card-title">GitHub</h5>
-                            <p class="card-text">Contribua com o nosso repositório.</p>
-                            <a class="btn btn-primary btn-large" href="https://github.com/wnneto/dinheirinho">
-                                Acesse</a>
-                        </div>
-                    </div>
+        <div class="col-sm-3">
+            <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                    class="btn btn-primary">Inscrever-se
+            </button>
+        </div>
+    </div>
+   </form>
+</div>
+<!-- Fim inscrição -->
+<p></p>
+<!-- Inicio card -->
+<div class="container">
+    <div class="row row-cols-1 row-cols-md">
+        <div class="col">
+            <div class="card">
+                <img src="{% static 'img/git.png' %}" class="img-thumbnail-center" width="96" height="96">
+                <div class="card-body">
+                    <h5 class="card-title">GitHub</h5>
+                    <p class="card-text">Contribua com o nosso repositório.</p>
+                    <a class="btn btn-primary btn-large" href="https://github.com/wnneto/dinheirinho">
+                        Acesse</a>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fim Card -->
+
+<!-- Inicio Rodapé -->
+<div class="container">
+    <footer class="rodape mt-3 pt-1">
+        <div class="row justify-content-md-center">
+            <div class="col">
+                <h5 class="m-1">Contato</h5>
+                <address>
+                    <a href="mailto: wn.nt3w@gmail.com">
+                        <img src="{% static 'img/mail.png' %}" alt="" width="38" height="38"
+                             class="d-inline-block align-text-top"></a>
+                    <a href='{% url "base:home" %}'> <!-- MUDAR -->
+                        <img src="{% static 'img/instagram.png' %}" alt="" width="38" height="38"
+                             class="d-inline-block align-text-top"></a>
+                    <a href='{% url "base:home" %}'> <!-- MUDAR -->
+                        <img src="{% static 'img/linkdin.png' %}" alt="" width="38" height="38"
+                             class="d-inline-block align-text-top"></a>
+                </address>
+            </div>
+        </div>
+        <div class="direitos pb-2">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col mt-2">
+                        {% now 'Y' %} Dinheirinho. Todos os direitos reservados.
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Fim Texto -->
-
-        <!-- Inicio Rodapé -->
-        <footer class="rodape mt-3 pt-1">
-            <div class="row">
-                <div class="col">
-                    <h5 class="m-1">Contato</h5>
-                    <address>
-                        <a href="mailto: wn.nt3w@gmail.com">
-                            <img src="{% static 'img/mail.png' %}" alt="" width="38" height="38"
-                                 class="d-inline-block align-text-top"></a>
-                        <a href='{% url "base:home" %}'> <!-- MUDAR -->
-                            <img src="{% static 'img/instagram.png' %}" alt="" width="38" height="38"
-                                 class="d-inline-block align-text-top"></a>
-                        <a href='{% url "base:home" %}'> <!-- MUDAR -->
-                            <img src="{% static 'img/linkdin.png' %}" alt="" width="38" height="38"
-                                 class="d-inline-block align-text-top"></a>
-                    </address>
-                </div>
-            </div>
-            <div class="direitos pb-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col mt-2">
-                            {% now 'Y' %} Dinheirinho. Todos os direitos reservados.
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
     </footer>
-    <!-- Fim Rodapé -->
 </div>
+<!-- Fim do rodapé -->
 </body>
 </html>
