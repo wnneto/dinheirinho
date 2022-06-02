@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'collectfast',
     'django.contrib.staticfiles',
     'nkpro.base',
+    'nkpro.multi',
 ]
 
 MIDDLEWARE = [
