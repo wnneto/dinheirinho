@@ -14,20 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.conf import settings
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+
+from nkpro.multi.views import video
 
 
+app_name = 'multi'
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('nkpro.base.urls')),
-    path('multi/', include('nkpro.multi.urls')),
+    path('<slug:slug>', video, name='video'),
 ]
-
-if settings.DEBUG:
-    import debug_toolbar
-
-    urlpatterns.append(
-        path('__debug__/', include(debug_toolbar.urls))
-    )
