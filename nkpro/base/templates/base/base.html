@@ -58,7 +58,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link" href="{% url 'admin:index'  %}">Admin</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -72,37 +72,7 @@
 <!-- FIM NAVBAR -->
 {% block body %}{% endblock body %}
 
+{% include 'base/footer.html' with contato_email='wn.nt3w@gmail.com' only %}
 
-<!-- Inicio Rodapé -->
-<div class="container-fluid">
-    <footer class="rodape mt-3 pt-1">
-        <div class="row justify-content-md-center">
-            <div class="col">
-                <h5 class="m-1">Contato</h5>
-                <address>
-                    <a href="mailto: wn.nt3w@gmail.com">
-                        <img src="{% static 'img/mail.png' %}" alt="" width="38" height="38"
-                             class="d-inline-block align-text-top"></a>
-                    <a href='{% url "base:home" %}'> <!-- MUDAR -->
-                        <img src="{% static 'img/instagram.png' %}" alt="" width="38" height="38"
-                             class="d-inline-block align-text-top"></a>
-                    <a href='{% url "base:home" %}'> <!-- MUDAR -->
-                        <img src="{% static 'img/linkdin.png' %}" alt="" width="38" height="38"
-                             class="d-inline-block align-text-top"></a>
-                </address>
-            </div>
-        </div>
-        <div class="direitos pb-2">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="fs-6 mt-2">
-                        {% now 'Y' %} Dinheirinho. Todos os direitos reservados.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>
-<!-- Fim do rodapé -->
 </body>
 </html>

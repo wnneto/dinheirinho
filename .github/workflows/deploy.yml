@@ -16,10 +16,10 @@ jobs:
       postgres:
         image: postgres:12
         env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: postgres
-        ports: [ '5432:5432' ]
+          POSTGRES_USER: nkpro
+          POSTGRES_PASSWORD: nkpro
+          POSTGRES_DB: nkdb
+        ports: [ '5434:5432' ]
 
     steps:
       - uses: actions/checkout@v3
