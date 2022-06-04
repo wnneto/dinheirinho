@@ -16,10 +16,11 @@ Including another URLconf
 
 from django.urls import path
 
-from nkpro.multi.views import video
+from nkpro.multi.views import video, indice
 
 
 app_name = 'multi'
 urlpatterns = [
     path('<slug:slug>', video, name='video'),
+    path('', indice, name='indice'),
 ]

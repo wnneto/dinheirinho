@@ -16,7 +16,7 @@ def test_status_code(resp):   # Teste de resposta
 
 
 def test_title(resp):   # Teste para o título da página
-    assert_contains(resp, '<title>Dinheirinho Smart Gestão!</title>')
+    assert_contains(resp, '<title>Dinheirinho - Home</title>')
 
 
 def test_home_link(resp):   # Teste home link
