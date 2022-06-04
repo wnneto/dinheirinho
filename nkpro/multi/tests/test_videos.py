@@ -26,12 +26,15 @@ def resp_video_off(client, video):
 
 
 def test_status_code_video_off(resp_video_off):
+    # Teste para links offline
     assert resp_video_off.status_code == 404
 
 
-def test_title_video(resp, video):  # Teste para o título da página
+def test_title_video(resp, video):
+    # Teste para o título da página
     assert_contains(resp, video.titulos)
 
 
-def test_conteudo_video(resp, video):  # Teste para link do video
+def test_conteudo_video(resp, video):
+    # Teste para link do video
     assert_contains(resp, f'<iframe src="https://www.youtube.com/embed/{video.yt_id}"')
