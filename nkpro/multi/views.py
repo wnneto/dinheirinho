@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 
 videos = [
-    {'slug': 'infomoney', 'titulos': 'InfoMoney', 'vimeo_id': 'BtAS8nqLMig'},
-    {'slug': 'sebrae', 'titulos': 'Sebrae', 'vimeo_id': 'QlnThFtNDDc'},
+    {'slug': 'infomoney', 'titulos': 'InfoMoney', 'yt_id': 'BtAS8nqLMig'},
+    {'slug': 'sebrae', 'titulos': 'Sebrae', 'yt_id': 'QlnThFtNDDc'},
 ]
 
 

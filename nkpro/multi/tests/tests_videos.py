@@ -6,7 +6,7 @@ from nkpro.django_assertions import assert_contains
 
 @pytest.fixture
 def resp(client):
-    return client.get(reverse('multi:video', args=('InfoMoney',)))
+    return client.get(reverse('multi:video', args=('infomoney',)))
 
 
 def test_status_code(resp):
@@ -14,8 +14,8 @@ def test_status_code(resp):
 
 
 def test_title_video(resp):  # Teste para o título da página
-    assert_contains(resp, '<h5 class="card-title"><b>InfoMoney</b></h5>')
+    assert_contains(resp, 'InfoMoney' or 'Sebrae')
 
 
 def test_conteudo_video(resp):  # Teste para o título da página
-    assert_contains(resp, 'src="https://player.vimeo.com/video/577177067"')
+    assert_contains(resp, 'src="https://www.youtube.com/embed/BtAS8nqLMig"')
