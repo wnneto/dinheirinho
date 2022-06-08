@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'nkpro.base',
     'nkpro.multi',
+    'nkpro.modulos',
+    'ordered_model',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'nkpro.modulos.context_processors.listar_modulos',
             ],
         },
     },

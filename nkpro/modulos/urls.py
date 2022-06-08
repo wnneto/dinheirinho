@@ -14,21 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.conf import settings
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 
+from nkpro.modulos import views
 
+app_name = 'modulos'
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('nkpro.base.urls')),
-    path('multi/', include('nkpro.multi.urls')),
-    path('modulos/', include('nkpro.modulos.urls')),
+    path('<slug:slug>', views.detalhe, name='detalhe'),
 ]
-
-if settings.DEBUG:
-    import debug_toolbar
-
-    urlpatterns.append(
-        path('__debug__/', include(debug_toolbar.urls))
-    )

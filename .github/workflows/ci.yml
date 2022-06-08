@@ -14,7 +14,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:9.6
+        image: postgres:12
         env:
           POSTGRES_USER: nkpro
           POSTGRES_PASSWORD: nkpro

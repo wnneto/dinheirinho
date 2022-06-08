@@ -3,15 +3,15 @@ version: '3.3'
 services:
 
   db:
-    image: postgres:9.6
-    container_name: nkdb
+    image: postgres:12
+    container_name: nkdata
     ports:
       - '5434:5432'
     tty: true
     volumes:
       - .docker/.pgdata:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=nkdb
+      - POSTGRES_DB=nkdata
       - POSTGRES_USER=nkpro
       - POSTGRES_PASSWORD=nkpro
       - POSTGRES_HOST=localhost
