@@ -31,6 +31,10 @@ DEBUG = config('DEBUG', cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())  # Modificado para ser acesssível a partir de qualquer domínio
 
 AUTH_USER_MODEL = 'base.User'
+LOGIN_URL = '/contas/login/'
+LOGIN_REDIRECT_URL = '/profile/'
+LOGOUT_REDIRECT_URL = '/'
+
 
 # Application definition
 
@@ -42,10 +46,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'collectfast',
     'django.contrib.staticfiles',
+    'ordered_model',
+    # 'django.contrib.sites',
+    # Dinheirinho APP
     'nkpro.base',
     'nkpro.multi',
     'nkpro.modulos',
-    'ordered_model',
+    'nkpro.registro',
+
 ]
 
 MIDDLEWARE = [
@@ -63,7 +71,7 @@ ROOT_URLCONF = 'nkpro.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,6 +84,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'nkpro.wsgi.application'
 

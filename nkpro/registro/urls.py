@@ -16,12 +16,10 @@ Including another URLconf
 
 from django.urls import path
 
-from nkpro.base.views import home, sobre, contatos, profile
+from nkpro.registro.views import RegistroView
 
-app_name = 'base'
+app_name = 'registro'
 urlpatterns = [
-    path('', home, name='home'),
-    path('sobre/', sobre, name='sobre'),
-    path('contatos/', contatos, name='contatos'),
-    path('profile/', profile, name='profile'),
+    path('signup/', RegistroView.as_view(), name='signup'),
+
 ]

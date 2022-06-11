@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Dinheirinho - Home{% endblock title %}
+<!-- {% block description %} {% endblock description %} -->
+
+{% block body %}
+<div class="container">
+        <div class="row-sm-6">
+            <br>
+            <h2 class="bg-success p-2" style="--bs-bg-opacity: .5;">
+                Hello, world!
+            </h2>
+            <p>
+                O Dinheirinho pretende tornar mais intuitivo o registro de compras e cobranças.
+                Permitindo organizar, controlar e planejar as finanças. Tenha mais tempo para aproveitar
+                a vida!
+            </p>
+        </div>
+</div>
+
+
+
+<p></p>
+<!-- Inicio card -->
+<div class="container">
+    <div class="row row-cols-1 row-cols-md">
+        <div class="col">
+            <div class="card">
+                <img src="{% static 'img/git.png' %}" class="img-thumbnail-center" width="96" height="96">
+                <div class="card-body">
+                    <h5 class="card-title">GitHub</h5>
+                    <p class="card-text">Contribua com o nosso repositório.</p>
+                    <a class="btn btn-primary btn-large" href="https://github.com/wnneto/dinheirinho">
+                        Acesse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fim Card -->
+
+{% endblock body %}

@@ -21,9 +21,11 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('contas/', include('django.contrib.auth.urls')),
     path('', include('nkpro.base.urls')),
     path('multi/', include('nkpro.multi.urls')),
     path('modulos/', include('nkpro.modulos.urls')),
+    path('', include('nkpro.registro.urls')),
 ]
 
 if settings.DEBUG:
